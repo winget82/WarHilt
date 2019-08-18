@@ -179,16 +179,30 @@ public class WarHilt {
 
     private static GameBoard refreshSquareColors(GameBoard gameBoard, Color color1, Color color2){
         for (int row = 0; row < gameBoard.getBoard().length; row++) {
-            for (int col = 0; col < gameBoard.getBoard()[row].length; col++) {
-                if (Integer.valueOf(gameBoard.getSquare(row, col).getGridId()) % 2 == 0) {
-                    gameBoard.getSquare(row, col).setColor(color1);
-                    System.out.println("gridId of square [" + row +"][" + col + "] is " + gameBoard.getSquare(row, col).getGridId());
-                    System.out.println("color of refreshed square is " + gameBoard.getSquare(row, col).getSquareColor().toString());
-                } else {
-                    gameBoard.getSquare(row, col).setColor(color2);
-                    System.out.println("gridId of square [" + row +"][" + col + "] is " + gameBoard.getSquare(row, col).getGridId());
-                    System.out.println("color of refreshed square is " + gameBoard.getSquare(row, col).getSquareColor().toString());
+            if (row % 2 == 0) {
+                for (int col = 0; col < gameBoard.getBoard()[row].length; col++) {
+                    if (Integer.valueOf(gameBoard.getSquare(row, col).getGridId()) % 2 == 0) {
+                        gameBoard.getSquare(row, col).setColor(color1);
+                        System.out.println("gridId of square [" + row + "][" + col + "] is " + gameBoard.getSquare(row, col).getGridId());
+                        System.out.println("color of refreshed square is " + gameBoard.getSquare(row, col).getSquareColor().toString());
+                    } else if (Integer.valueOf(gameBoard.getSquare(row, col).getGridId()) % 2 == 1) {
+                        gameBoard.getSquare(row, col).setColor(color2);
+                        System.out.println("gridId of square [" + row + "][" + col + "] is " + gameBoard.getSquare(row, col).getGridId());
+                        System.out.println("color of refreshed square is " + gameBoard.getSquare(row, col).getSquareColor().toString());
+                    }
                 }
+            } else if (row % 2 == 1) {
+                    for (int col = 0; col < gameBoard.getBoard()[row].length; col++) {
+                        if (Integer.valueOf(gameBoard.getSquare(row, col).getGridId()) % 2 == 1) {
+                            gameBoard.getSquare(row, col).setColor(color1);
+                            System.out.println("gridId of square [" + row + "][" + col + "] is " + gameBoard.getSquare(row, col).getGridId());
+                            System.out.println("color of refreshed square is " + gameBoard.getSquare(row, col).getSquareColor().toString());
+                        } else  if (Integer.valueOf(gameBoard.getSquare(row, col).getGridId()) % 2 == 0) {
+                            gameBoard.getSquare(row, col).setColor(color2);
+                            System.out.println("gridId of square [" + row + "][" + col + "] is " + gameBoard.getSquare(row, col).getGridId());
+                            System.out.println("color of refreshed square is " + gameBoard.getSquare(row, col).getSquareColor().toString());
+                        }
+                    }
             }
         }
         return gameBoard;
