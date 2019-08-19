@@ -58,15 +58,24 @@ public class WarHilt {
         menuBar.add(fileMenu);
 
         JMenuItem fileMenu_Open = new JMenuItem("Open", KeyEvent.VK_O);
-        fileMenu_Open.getAccessibleContext().setAccessibleDescription("Open a saved file");
+        fileMenu_Open.getAccessibleContext().setAccessibleDescription("Open a saved game");
+        fileMenu_Open.setToolTipText("Open a saved game");
         fileMenu.add(fileMenu_Open);
 
         JMenuItem fileMenu_Save = new JMenuItem("Save", KeyEvent.VK_S);
-        fileMenu_Save.getAccessibleContext().setAccessibleDescription("Save the current file");
+        fileMenu_Save.getAccessibleContext().setAccessibleDescription("Save the current game");
+        fileMenu_Save.setToolTipText("Save the current game");
         fileMenu.add(fileMenu_Save);
 
         JMenuItem fileMenu_Exit = new JMenuItem("Exit", KeyEvent.VK_E);
-        fileMenu_Exit.getAccessibleContext().setAccessibleDescription("Exit the current file");
+        fileMenu_Exit.getAccessibleContext().setAccessibleDescription("Exit the game");
+        fileMenu_Exit.setToolTipText("Exit the game");
+        fileMenu_Exit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
         fileMenu.add(fileMenu_Exit);
 
         //Options Menu
@@ -76,6 +85,7 @@ public class WarHilt {
 
         JMenu optionsMenu_Colors = new JMenu("Colors");
         optionsMenu_Colors.getAccessibleContext().setAccessibleDescription("Color settings");
+        optionsMenu_Colors.setToolTipText("Change colors of game");
         optionsMenu.add(optionsMenu_Colors);
 
         JRadioButtonMenuItem whiteBlack = new JRadioButtonMenuItem("White & Black", true);
@@ -84,16 +94,28 @@ public class WarHilt {
         optionsMenu_Colors.add(redBlack);
         JRadioButtonMenuItem whiteBlue = new JRadioButtonMenuItem("White & Blue", false);
         optionsMenu_Colors.add(whiteBlue);
+        JRadioButtonMenuItem whiteGreen = new JRadioButtonMenuItem("White & Green", false);
+        optionsMenu_Colors.add(whiteGreen);
+        JRadioButtonMenuItem greenBlack = new JRadioButtonMenuItem("Green & Black", false);
+        optionsMenu_Colors.add(greenBlack);
+        JRadioButtonMenuItem grayBlack = new JRadioButtonMenuItem("Gray & Black", false);
+        optionsMenu_Colors.add(grayBlack);
+        JRadioButtonMenuItem goldPurple = new JRadioButtonMenuItem("Gold & Purple", false);
+        optionsMenu_Colors.add(goldPurple);
+        JRadioButtonMenuItem slate = new JRadioButtonMenuItem("Slate Theme", false);
+        optionsMenu_Colors.add(slate);
+        JRadioButtonMenuItem brown = new JRadioButtonMenuItem("Brown Theme", false);
+        optionsMenu_Colors.add(brown);
 
         //Make a Button Group for color settings
         ButtonGroup colorBG = new ButtonGroup();
+
         colorBG.add(whiteBlack);
         whiteBlack.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 gameBoard.setColors(Color.WHITE, Color.BLACK);
-                //method to set square colors because the above only sets board colors
-                refreshSquareColors(gameBoard, Color.WHITE, Color.BLACK);
+                refreshSquareColors(gameBoard, Color.WHITE, Color.BLACK, panel);
                 drawButtons(gameBoard, panel);
             }
         });
@@ -103,8 +125,7 @@ public class WarHilt {
             @Override
             public void actionPerformed(ActionEvent e) {
                 gameBoard.setColors(Color.RED, Color.BLACK);
-                //method to set square colors because the above only sets board colors
-                refreshSquareColors(gameBoard, Color.RED, Color.BLACK);
+                refreshSquareColors(gameBoard, Color.RED, Color.BLACK, panel);
                 drawButtons(gameBoard, panel);
             }
         });
@@ -114,8 +135,67 @@ public class WarHilt {
             @Override
             public void actionPerformed(ActionEvent e) {
                 gameBoard.setColors(Color.WHITE, Color.BLUE);
-                refreshSquareColors(gameBoard, Color.WHITE, Color.BLUE);
-                //method to set square colors because the above only sets board colors
+                refreshSquareColors(gameBoard, Color.WHITE, Color.BLUE, panel);
+                drawButtons(gameBoard, panel);
+            }
+        });
+
+        colorBG.add(whiteGreen);
+        whiteGreen.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gameBoard.setColors(Color.WHITE, new Color(0, 100, 0));
+                refreshSquareColors(gameBoard, Color.WHITE, new Color(0, 100, 0), panel);
+                drawButtons(gameBoard, panel);
+            }
+        });
+
+        colorBG.add(greenBlack);
+        greenBlack.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gameBoard.setColors(new Color(0, 100, 0), Color.BLACK);
+                refreshSquareColors(gameBoard, new Color(0, 100, 0), Color.BLACK, panel);
+                drawButtons(gameBoard, panel);
+            }
+        });
+
+        colorBG.add(grayBlack);
+        grayBlack.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gameBoard.setColors(new Color(192, 192, 192), Color.BLACK);
+                refreshSquareColors(gameBoard, new Color(192, 192, 192), Color.BLACK, panel);
+                drawButtons(gameBoard, panel);
+            }
+        });
+
+        colorBG.add(goldPurple);
+        goldPurple.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gameBoard.setColors(new Color(218, 165, 32), new Color(128, 0, 128));
+                refreshSquareColors(gameBoard, new Color(218, 165, 32), new Color(128, 0, 128), panel);
+                drawButtons(gameBoard, panel);
+            }
+        });
+
+        colorBG.add(slate);
+        slate.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gameBoard.setColors(new Color(240, 248, 255), new Color(47, 79, 79));
+                refreshSquareColors(gameBoard, new Color(240, 248, 255), new Color(47, 79, 79), panel);
+                drawButtons(gameBoard, panel);
+            }
+        });
+
+        colorBG.add(brown);
+        brown.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gameBoard.setColors(new Color(238, 232, 170), new Color(165, 42, 42));
+                refreshSquareColors(gameBoard, new Color(238, 232, 170), new Color(165, 42, 42), panel);
                 drawButtons(gameBoard, panel);
             }
         });
@@ -136,6 +216,7 @@ public class WarHilt {
     }
 
     private static GameBoard drawButtons(GameBoard gameBoard, JPanel panel){
+
         //Add buttons to frame
         for(int i=0; i < 64; i++) {
             String buttonName = Integer.toString(i);
@@ -151,6 +232,12 @@ public class WarHilt {
                         String gridName = gameBoard.getSquare(row, col).getGridName();
                         Color defaultColor = gameBoard.getSquare(row, col).getSquareColor();
                         button.setBackground(defaultColor);
+                        /*
+                        Have tool tip to tell you the name of the game piece on the current square along with grid name
+                        button.setToolTipText(gameBoard.getSquare(row, col).getGamePieceNameByIdOnSquare());
+                        */
+                        button.setToolTipText(gameBoard.getSquare(row, col).getGridName());
+
                         System.out.println(gameBoard.getSquare(row, col).getSquareColor().toString());
                         button.addActionListener(new ActionListener() {
                             @Override
@@ -177,7 +264,10 @@ public class WarHilt {
         return gameBoard;
     }
 
-    private static GameBoard refreshSquareColors(GameBoard gameBoard, Color color1, Color color2){
+    private static GameBoard refreshSquareColors(GameBoard gameBoard, Color color1, Color color2, JPanel panel){
+
+        panel.removeAll();
+
         for (int row = 0; row < gameBoard.getBoard().length; row++) {
             if (row % 2 == 0) {
                 for (int col = 0; col < gameBoard.getBoard()[row].length; col++) {
@@ -204,6 +294,8 @@ public class WarHilt {
                         }
                     }
             }
+            panel.revalidate();
+            panel.repaint();
         }
         return gameBoard;
         /*this is updating the color of the game board squares, but need to actually change previous buttons rather than

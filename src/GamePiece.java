@@ -2,7 +2,7 @@ public abstract class GamePiece {
 
     //Attributes / Fields
     private String color;
-    private String name;
+    public String name;
     private Boolean isActive;
     private String currentGridCellColor;
     private Integer gamePieceId;//need to generate a unique ID for each game piece to be identified during game from 1-32

@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72dd394f-c56a-4c43-a1e5-7e95ebcae45d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/GamePiece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/GamePiece.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BoardSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GamePiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePiece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WarHilt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WarHilt.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,7 +80,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

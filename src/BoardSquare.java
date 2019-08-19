@@ -58,4 +58,9 @@ public class BoardSquare {
     public void setGridId(Integer gridId) {
         this.gridId = gridId;
     }
+    /*
+    public String getGamePieceNameByIdOnSquare(String gamePieceIdOnSquare, GamePiece gamePiece) {
+        //figure out some logic here to return the name of the gamePiece by its ID using the ID of the game piece on the square
+    }
+    */
 }
