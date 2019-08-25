@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Queen extends GamePiece {
 
     /*
@@ -7,8 +9,8 @@ public class Queen extends GamePiece {
     //Attributes / Fields
 
     //Constructor
-    public Queen(String color, String name, String currentGridCellColor) {
-        super(color, name, currentGridCellColor);
+    public Queen(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon) {
+        super(color, name, currentGridCellColor, gamePieceIcon);
     }
 
     @Override

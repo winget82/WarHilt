@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Infantry extends GamePiece {
 
     /*
@@ -9,8 +11,8 @@ public class Infantry extends GamePiece {
     //Attributes / Fields
 
     //Constructor
-    public Infantry(String color, String name, String currentGridCellColor) {
-        super(color, name, currentGridCellColor);
+    public Infantry(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon) {
+        super(color, name, currentGridCellColor, gamePieceIcon);
     }
 
     @Override

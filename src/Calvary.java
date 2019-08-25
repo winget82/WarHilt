@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Calvary extends GamePiece{
 
     /*
@@ -8,8 +10,8 @@ public class Calvary extends GamePiece{
     //Attributes / Fields
 
     //Constructor
-    public Calvary(String color, String name, String currentGridCellColor) {
-        super(color, name, currentGridCellColor);
+    public Calvary(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon) {
+        super(color, name, currentGridCellColor, gamePieceIcon);
     }
 
     @Override

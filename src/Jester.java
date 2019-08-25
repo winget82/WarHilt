@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Jester extends GamePiece {
 
     /*
@@ -9,8 +11,8 @@ public class Jester extends GamePiece {
     //Attributes / Fields
 
     //Constructor
-    public Jester(String color, String name, String currentGridCellColor) {
-        super(color, name, currentGridCellColor);
+    public Jester(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon) {
+        super(color, name, currentGridCellColor, gamePieceIcon);
     }
 
     @Override

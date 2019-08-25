@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class PoleArm extends GamePiece {
 
     /*
@@ -6,8 +8,8 @@ public class PoleArm extends GamePiece {
     //Attributes / Fields
 
     //Constructor
-    public PoleArm(String color, String name, String currentGridCellColor) {
-        super(color, name, currentGridCellColor);
+    public PoleArm(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon) {
+        super(color, name, currentGridCellColor, gamePieceIcon);
     }
 
     @Override

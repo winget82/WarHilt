@@ -2,15 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72dd394f-c56a-4c43-a1e5-7e95ebcae45d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Player1SetupWindow1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Player1SetupWindow2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Player2SetupWindow1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Player2SetupWindow2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/Archer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/Archer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/Assassin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/Assassin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/Calvary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/Calvary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/Cleric.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/Cleric.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WarHilt/GamePiece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/GamePiece.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/Infantry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/Infantry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/Jester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/Jester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/King.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/King.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/Pawn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/Pawn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/PoleArm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/PoleArm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/Queen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/Queen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$11.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BoardSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BoardSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Archer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assassin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assassin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calvary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calvary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cleric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cleric.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePiece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infantry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Jester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PoleArm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PoleArm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WarHilt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WarHilt.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

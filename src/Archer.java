@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Archer extends GamePiece {
 
     /*
@@ -8,8 +10,8 @@ public class Archer extends GamePiece {
     //Attributes / Fields
 
     //Constructor
-    public Archer(String color, String name, String currentGridCellColor) {
-        super(color, name, currentGridCellColor);
+    public Archer(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon) {
+        super(color, name, currentGridCellColor, gamePieceIcon);
     }
 
     @Override

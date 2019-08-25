@@ -43,7 +43,8 @@ public class WarHilt {
         //Make the Frame
         JFrame frame = new JFrame("War Hilt");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 600);
+        frame.setSize(700, 700);
+        frame.setMinimumSize(new Dimension(600, 600));
 
         //Make the panel
         JPanel panel = new JPanel((new GridLayout(8,8)));
@@ -56,6 +57,305 @@ public class WarHilt {
         fileMenu.setMnemonic(KeyEvent.VK_F);
         fileMenu.getAccessibleContext().setAccessibleDescription("This is the file menu for managing the file");
         menuBar.add(fileMenu);
+
+        JMenuItem fileMenu_NewGame = new JMenuItem("New Game", KeyEvent.VK_N);
+        fileMenu_NewGame.getAccessibleContext().setAccessibleDescription("Start a new game");
+        fileMenu_NewGame.setToolTipText("Start a new game");
+        fileMenu_NewGame.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                //NEED TO SET UP A WINDOW HERE FOR PLAYER TO CHOOSE THERE COLOR
+                Player player1 = new Player(Color.BLACK);
+                //THEN INITIATE NEXT WINDOW WITH STUFF BELOW THIS POINT (EVENTUALLY SEPARATE THESE WINDOWS
+                //INTO SEPARATE CLASSES)...
+
+                int totalPieceCount = 2;
+
+                JFrame newGameSetUpFrame1 = new JFrame("New Game Set Up - Player 1");
+                newGameSetUpFrame1.setSize(250, 350);
+                newGameSetUpFrame1.setMinimumSize(new Dimension(250, 350));
+
+                JPanel newGameSetUpPanel = new JPanel(new GridBagLayout());
+                GridBagConstraints c = new GridBagConstraints();
+
+                JLabel kingCountLabel = new JLabel("King:");
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 0;
+                c.gridy = 0;
+                newGameSetUpPanel.add(kingCountLabel, c);
+
+                JLabel kingCount = new JLabel(Integer.valueOf(player1.getKingCountNumber()).toString());
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 1;
+                c.gridy = 0;
+                newGameSetUpPanel.add(kingCount, c);
+
+                JLabel kingCountResult = new JLabel(Integer.valueOf(player1.getKingCountNumber()).toString());
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 2;
+                c.gridy = 0;
+                newGameSetUpPanel.add(kingCountResult, c);
+
+                JLabel archerCount = new JLabel("Archers:");
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 0;
+                c.gridy = 1;
+                newGameSetUpPanel.add(archerCount, c);
+
+                JTextField archerCountTextField = new JTextField(3);
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 1;
+                c.gridy = 1;
+                newGameSetUpPanel.add(archerCountTextField, c);
+
+                JLabel archerCountResult = new JLabel(Integer.valueOf(player1.getArcherCountNumber()).toString());
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 2;
+                c.gridy = 1;
+                newGameSetUpPanel.add(archerCountResult, c);
+
+                JLabel assassinCount = new JLabel("Assassins:");
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 0;
+                c.gridy = 2;
+                newGameSetUpPanel.add(assassinCount, c);
+
+                JTextField assassinCountTextField = new JTextField(3);
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 1;
+                c.gridy = 2;
+                newGameSetUpPanel.add(assassinCountTextField, c);
+
+                JLabel assassinCountResult = new JLabel(Integer.valueOf(player1.getAssassinCountNumber()).toString());
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 2;
+                c.gridy = 2;
+                newGameSetUpPanel.add(assassinCountResult, c);
+
+                JLabel calvaryCount = new JLabel("Calvary:");
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 0;
+                c.gridy = 3;
+                newGameSetUpPanel.add(calvaryCount, c);
+
+                JTextField calvaryCountTextField = new JTextField(3);
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 1;
+                c.gridy = 3;
+                newGameSetUpPanel.add(calvaryCountTextField, c);
+
+                JLabel calvaryCountResult = new JLabel(Integer.valueOf(player1.getCalvaryCountNumber()).toString());
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 2;
+                c.gridy = 3;
+                newGameSetUpPanel.add(calvaryCountResult, c);
+
+                JLabel clericCount = new JLabel("Clerics:");
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 0;
+                c.gridy = 4;
+                newGameSetUpPanel.add(clericCount, c);
+
+                JTextField clericCountTextField = new JTextField(3);
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 1;
+                c.gridy = 4;
+                newGameSetUpPanel.add(clericCountTextField, c);
+
+                JLabel clericCountResult = new JLabel(Integer.valueOf(player1.getClericCountNumber()).toString());
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 2;
+                c.gridy = 4;
+                newGameSetUpPanel.add(clericCountResult, c);
+
+                JLabel infantryCount = new JLabel("Infantry:");
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 0;
+                c.gridy = 5;
+                newGameSetUpPanel.add(infantryCount, c);
+
+                JTextField infantryCountTextField = new JTextField(3);
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 1;
+                c.gridy = 5;
+                newGameSetUpPanel.add(infantryCountTextField, c);
+
+                JLabel infantryCountResult = new JLabel(Integer.valueOf(player1.getInfantryCountNumber()).toString());
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 2;
+                c.gridy = 5;
+                newGameSetUpPanel.add(infantryCountResult, c);
+
+                JLabel jesterCount = new JLabel("Jesters:");
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 0;
+                c.gridy = 6;
+                newGameSetUpPanel.add(jesterCount, c);
+
+                JTextField jesterCountTextField = new JTextField(3);
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 1;
+                c.gridy = 6;
+                newGameSetUpPanel.add(jesterCountTextField, c);
+
+                JLabel jesterCountResult = new JLabel(Integer.valueOf(player1.getJesterCountNumber()).toString());
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 2;
+                c.gridy = 6;
+                newGameSetUpPanel.add(jesterCountResult, c);
+
+                JLabel pawnCount = new JLabel("Pawns:");
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 0;
+                c.gridy = 7;
+                newGameSetUpPanel.add(pawnCount, c);
+
+                JTextField pawnCountTextField = new JTextField(3);
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 1;
+                c.gridy = 7;
+                newGameSetUpPanel.add(pawnCountTextField, c);
+
+                JLabel pawnCountResult = new JLabel(Integer.valueOf(player1.getPawnCountNumber()).toString());
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 2;
+                c.gridy = 7;
+                newGameSetUpPanel.add(pawnCountResult, c);
+
+                JLabel poleArmCount = new JLabel("Pole Arms:");
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 0;
+                c.gridy = 8;
+                newGameSetUpPanel.add(poleArmCount, c);
+
+                JTextField poleArmCountTextField = new JTextField(3);
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 1;
+                c.gridy = 8;
+                newGameSetUpPanel.add(poleArmCountTextField, c);
+
+                JLabel poleArmCountResult = new JLabel(Integer.valueOf(player1.getPoleArmCountNumber()).toString());
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 2;
+                c.gridy = 8;
+                newGameSetUpPanel.add(poleArmCountResult, c);
+
+                JLabel queenCountLabel = new JLabel("Queen:");
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 0;
+                c.gridy = 9;
+                newGameSetUpPanel.add(queenCountLabel, c);
+
+                JLabel queenCount = new JLabel(Integer.valueOf(player1.getQueenCountNumber()).toString());
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 1;
+                c.gridy = 9;
+                newGameSetUpPanel.add(queenCount, c);
+
+                JLabel queenCountResult = new JLabel(Integer.valueOf(player1.getQueenCountNumber()).toString());
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 2;
+                c.gridy = 9;
+                newGameSetUpPanel.add(queenCountResult, c);
+
+                JLabel totalPieceCountLabel = new JLabel("Total:");
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 0;
+                c.gridy = 11;
+                newGameSetUpPanel.add(totalPieceCountLabel, c);
+
+                JLabel totalPieceCountLabel2 = new JLabel(Integer.valueOf(player1.getTotalPieceNumber()).toString());
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 2;
+                c.gridy = 11;
+                newGameSetUpPanel.add(totalPieceCountLabel2, c);
+
+                JLabel note = new JLabel("  (16 pieces total)  ");
+                c.fill = GridBagConstraints.HORIZONTAL;
+                c.gridx = 0;
+                c.gridy = 12;
+                newGameSetUpPanel.add(note, c);
+
+                //Handle action events of text fields
+                archerCountTextField.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        archerCountResult.setText(archerCountTextField.getText());
+                        player1.setArcherCountNumber(Integer.parseInt(archerCountTextField.getText()));
+                        totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
+                    }
+                });
+
+                assassinCountTextField.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        assassinCountResult.setText(assassinCountTextField.getText());
+                        player1.setAssassinCountNumber(Integer.parseInt(assassinCountTextField.getText()));
+                        totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
+                    }
+                });
+
+                calvaryCountTextField.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        calvaryCountResult.setText(calvaryCountTextField.getText());
+                        player1.setCalvaryCountNumber(Integer.parseInt(calvaryCountTextField.getText()));
+                        totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
+                    }
+                });
+
+                clericCountTextField.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        clericCountResult.setText(clericCountTextField.getText());
+                        player1.setClericCountNumber(Integer.parseInt(clericCountTextField.getText()));
+                        totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
+                    }
+                });
+
+                infantryCountTextField.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        infantryCountResult.setText(infantryCountTextField.getText());
+                        player1.setInfantryCountNumber(Integer.parseInt(infantryCountTextField.getText()));
+                        totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
+                    }
+                });
+
+                jesterCountTextField.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        jesterCountResult.setText(jesterCountTextField.getText());
+                        player1.setJesterCountNumber(Integer.parseInt(jesterCountTextField.getText()));
+                        totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
+                    }
+                });
+
+                pawnCountTextField.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        pawnCountResult.setText(pawnCountTextField.getText());
+                        player1.setPawnCountNumber(Integer.parseInt(pawnCountTextField.getText()));
+                        totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
+                    }
+                });
+
+                poleArmCountTextField.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        poleArmCountResult.setText(poleArmCountTextField.getText());
+                        player1.setPoleArmCountNumber(Integer.parseInt(poleArmCountTextField.getText()));
+                        totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
+                    }
+                });
+
+                newGameSetUpFrame1.getContentPane().add(BorderLayout.CENTER, newGameSetUpPanel);
+                newGameSetUpFrame1.setVisible(true);
+            }
+        });
+
+        fileMenu.add(fileMenu_NewGame);
 
         JMenuItem fileMenu_Open = new JMenuItem("Open", KeyEvent.VK_O);
         fileMenu_Open.getAccessibleContext().setAccessibleDescription("Open a saved game");
@@ -220,7 +520,12 @@ public class WarHilt {
         //Add buttons to frame
         for(int i=0; i < 64; i++) {
             String buttonName = Integer.toString(i);
-            JButton button = new JButton(buttonName);
+
+            //Icon testing
+            ImageIcon king = new ImageIcon("./icons/pieces/black/kingT_40px_h.png");
+            JButton button = new JButton(buttonName, king);
+
+
             button.setName(buttonName);
 
             //Add buttons with correct color

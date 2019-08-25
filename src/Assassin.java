@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Assassin extends GamePiece {
 
     /*
@@ -8,8 +10,8 @@ public class Assassin extends GamePiece {
     //Attributes / Fields
 
     //Constructor
-    public Assassin(String color, String name, String currentGridCellColor) {
-        super(color, name, currentGridCellColor);
+    public Assassin(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon) {
+        super(color, name, currentGridCellColor, gamePieceIcon);
     }
 
     @Override
