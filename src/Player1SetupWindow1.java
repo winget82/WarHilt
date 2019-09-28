@@ -1,2 +1,4 @@
-public class Player1SetupWindow1 {
+public class Player1SetupWindow1
+{
+
 }

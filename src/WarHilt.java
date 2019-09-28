@@ -35,7 +35,8 @@ public class WarHilt {
     assassin by a player in the game.  The polearm moves like the rook in chess. Player must choose one king.
      */
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         System.out.println("Welcome to War Hilt.  A simple war game.");
 
         GameBoard gameBoard = new GameBoard(Color.WHITE, Color.BLACK);
@@ -61,11 +62,13 @@ public class WarHilt {
         JMenuItem fileMenu_NewGame = new JMenuItem("New Game", KeyEvent.VK_N);
         fileMenu_NewGame.getAccessibleContext().setAccessibleDescription("Start a new game");
         fileMenu_NewGame.setToolTipText("Start a new game");
-        fileMenu_NewGame.addActionListener(new ActionListener() {
+        fileMenu_NewGame.addActionListener(new ActionListener()
+        {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
 
-                //NEED TO SET UP A WINDOW HERE FOR PLAYER TO CHOOSE THERE COLOR
+                //NEED TO SET UP A WINDOW HERE FOR PLAYER TO CHOOSE THEIR COLOR
                 Player player1 = new Player(Color.BLACK);
                 //THEN INITIATE NEXT WINDOW WITH STUFF BELOW THIS POINT (EVENTUALLY SEPARATE THESE WINDOWS
                 //INTO SEPARATE CLASSES)...
@@ -278,72 +281,88 @@ public class WarHilt {
                 newGameSetUpPanel.add(note, c);
 
                 //Handle action events of text fields
-                archerCountTextField.addActionListener(new ActionListener() {
+                archerCountTextField.addActionListener(new ActionListener()
+                {
                     @Override
-                    public void actionPerformed(ActionEvent e) {
+                    public void actionPerformed(ActionEvent e)
+                    {
                         archerCountResult.setText(archerCountTextField.getText());
                         player1.setArcherCountNumber(Integer.parseInt(archerCountTextField.getText()));
                         totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
                     }
                 });
 
-                assassinCountTextField.addActionListener(new ActionListener() {
+                assassinCountTextField.addActionListener(new ActionListener()
+                {
                     @Override
-                    public void actionPerformed(ActionEvent e) {
+                    public void actionPerformed(ActionEvent e)
+                    {
                         assassinCountResult.setText(assassinCountTextField.getText());
                         player1.setAssassinCountNumber(Integer.parseInt(assassinCountTextField.getText()));
                         totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
                     }
                 });
 
-                calvaryCountTextField.addActionListener(new ActionListener() {
+                calvaryCountTextField.addActionListener(new ActionListener()
+                {
                     @Override
-                    public void actionPerformed(ActionEvent e) {
+                    public void actionPerformed(ActionEvent e)
+                    {
                         calvaryCountResult.setText(calvaryCountTextField.getText());
                         player1.setCalvaryCountNumber(Integer.parseInt(calvaryCountTextField.getText()));
                         totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
                     }
                 });
 
-                clericCountTextField.addActionListener(new ActionListener() {
+                clericCountTextField.addActionListener(new ActionListener()
+                {
                     @Override
-                    public void actionPerformed(ActionEvent e) {
+                    public void actionPerformed(ActionEvent e)
+                    {
                         clericCountResult.setText(clericCountTextField.getText());
                         player1.setClericCountNumber(Integer.parseInt(clericCountTextField.getText()));
                         totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
                     }
                 });
 
-                infantryCountTextField.addActionListener(new ActionListener() {
+                infantryCountTextField.addActionListener(new ActionListener()
+                {
                     @Override
-                    public void actionPerformed(ActionEvent e) {
+                    public void actionPerformed(ActionEvent e)
+                    {
                         infantryCountResult.setText(infantryCountTextField.getText());
                         player1.setInfantryCountNumber(Integer.parseInt(infantryCountTextField.getText()));
                         totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
                     }
                 });
 
-                jesterCountTextField.addActionListener(new ActionListener() {
+                jesterCountTextField.addActionListener(new ActionListener()
+                {
                     @Override
-                    public void actionPerformed(ActionEvent e) {
+                    public void actionPerformed(ActionEvent e)
+                    {
                         jesterCountResult.setText(jesterCountTextField.getText());
                         player1.setJesterCountNumber(Integer.parseInt(jesterCountTextField.getText()));
                         totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
                     }
                 });
 
-                pawnCountTextField.addActionListener(new ActionListener() {
+                pawnCountTextField.addActionListener(new ActionListener()
+                {
                     @Override
-                    public void actionPerformed(ActionEvent e) {
+                    public void actionPerformed(ActionEvent e)
+                    {
                         pawnCountResult.setText(pawnCountTextField.getText());
                         player1.setPawnCountNumber(Integer.parseInt(pawnCountTextField.getText()));
                         totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
                     }
                 });
 
-                poleArmCountTextField.addActionListener(new ActionListener() {
+                poleArmCountTextField.addActionListener(new ActionListener()
+                {
                     @Override
-                    public void actionPerformed(ActionEvent e) {
+                    public void actionPerformed(ActionEvent e)
+                    {
                         poleArmCountResult.setText(poleArmCountTextField.getText());
                         player1.setPoleArmCountNumber(Integer.parseInt(poleArmCountTextField.getText()));
                         totalPieceCountLabel2.setText(Integer.valueOf(player1.getTotalPieceNumber()).toString());
@@ -370,7 +389,8 @@ public class WarHilt {
         JMenuItem fileMenu_Exit = new JMenuItem("Exit", KeyEvent.VK_E);
         fileMenu_Exit.getAccessibleContext().setAccessibleDescription("Exit the game");
         fileMenu_Exit.setToolTipText("Exit the game");
-        fileMenu_Exit.addActionListener(new ActionListener() {
+        fileMenu_Exit.addActionListener(new ActionListener()
+        {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
@@ -411,9 +431,11 @@ public class WarHilt {
         ButtonGroup colorBG = new ButtonGroup();
 
         colorBG.add(whiteBlack);
-        whiteBlack.addActionListener(new ActionListener() {
+        whiteBlack.addActionListener(new ActionListener()
+        {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 gameBoard.setColors(Color.WHITE, Color.BLACK);
                 refreshSquareColors(gameBoard, Color.WHITE, Color.BLACK, panel);
                 drawButtons(gameBoard, panel);
@@ -421,9 +443,11 @@ public class WarHilt {
         });
 
         colorBG.add(redBlack);
-        redBlack.addActionListener(new ActionListener() {
+        redBlack.addActionListener(new ActionListener()
+        {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 gameBoard.setColors(Color.RED, Color.BLACK);
                 refreshSquareColors(gameBoard, Color.RED, Color.BLACK, panel);
                 drawButtons(gameBoard, panel);
@@ -431,9 +455,11 @@ public class WarHilt {
         });
 
         colorBG.add(whiteBlue);
-        whiteBlue.addActionListener(new ActionListener() {
+        whiteBlue.addActionListener(new ActionListener()
+        {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 gameBoard.setColors(Color.WHITE, Color.BLUE);
                 refreshSquareColors(gameBoard, Color.WHITE, Color.BLUE, panel);
                 drawButtons(gameBoard, panel);
@@ -441,9 +467,11 @@ public class WarHilt {
         });
 
         colorBG.add(whiteGreen);
-        whiteGreen.addActionListener(new ActionListener() {
+        whiteGreen.addActionListener(new ActionListener()
+        {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 gameBoard.setColors(Color.WHITE, new Color(0, 100, 0));
                 refreshSquareColors(gameBoard, Color.WHITE, new Color(0, 100, 0), panel);
                 drawButtons(gameBoard, panel);
@@ -451,9 +479,11 @@ public class WarHilt {
         });
 
         colorBG.add(greenBlack);
-        greenBlack.addActionListener(new ActionListener() {
+        greenBlack.addActionListener(new ActionListener()
+        {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 gameBoard.setColors(new Color(0, 100, 0), Color.BLACK);
                 refreshSquareColors(gameBoard, new Color(0, 100, 0), Color.BLACK, panel);
                 drawButtons(gameBoard, panel);
@@ -461,9 +491,11 @@ public class WarHilt {
         });
 
         colorBG.add(grayBlack);
-        grayBlack.addActionListener(new ActionListener() {
+        grayBlack.addActionListener(new ActionListener()
+        {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 gameBoard.setColors(new Color(192, 192, 192), Color.BLACK);
                 refreshSquareColors(gameBoard, new Color(192, 192, 192), Color.BLACK, panel);
                 drawButtons(gameBoard, panel);
@@ -471,9 +503,11 @@ public class WarHilt {
         });
 
         colorBG.add(goldPurple);
-        goldPurple.addActionListener(new ActionListener() {
+        goldPurple.addActionListener(new ActionListener()
+        {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 gameBoard.setColors(new Color(218, 165, 32), new Color(128, 0, 128));
                 refreshSquareColors(gameBoard, new Color(218, 165, 32), new Color(128, 0, 128), panel);
                 drawButtons(gameBoard, panel);
@@ -481,9 +515,11 @@ public class WarHilt {
         });
 
         colorBG.add(slate);
-        slate.addActionListener(new ActionListener() {
+        slate.addActionListener(new ActionListener()
+        {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 gameBoard.setColors(new Color(240, 248, 255), new Color(47, 79, 79));
                 refreshSquareColors(gameBoard, new Color(240, 248, 255), new Color(47, 79, 79), panel);
                 drawButtons(gameBoard, panel);
@@ -491,9 +527,11 @@ public class WarHilt {
         });
 
         colorBG.add(brown);
-        brown.addActionListener(new ActionListener() {
+        brown.addActionListener(new ActionListener()
+        {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 gameBoard.setColors(new Color(238, 232, 170), new Color(165, 42, 42));
                 refreshSquareColors(gameBoard, new Color(238, 232, 170), new Color(165, 42, 42), panel);
                 drawButtons(gameBoard, panel);
@@ -515,23 +553,29 @@ public class WarHilt {
         frame.setVisible(true);
     }
 
-    private static GameBoard drawButtons(GameBoard gameBoard, JPanel panel){
+    private static GameBoard drawButtons(GameBoard gameBoard, JPanel panel)
+    {
 
         //Add buttons to frame
-        for(int i=0; i < 64; i++) {
+        for(int i=0; i < 64; i++)
+        {
             String buttonName = Integer.toString(i);
 
             //Icon testing
             ImageIcon king = new ImageIcon("./icons/pieces/black/kingT_40px_h.png");
             JButton button = new JButton(buttonName, king);
-
+            // this will need to set the GamePiece.icon for each piece chosen dependent on colors chosen
+            //probably here in main code not in the individual pieces
 
             button.setName(buttonName);
 
             //Add buttons with correct color
-            for (int row = 0; row < gameBoard.getBoard().length; row++){
-                for (int col = 0; col < gameBoard.getBoard()[row].length; col++) {
-                    if (button.getName().equals(gameBoard.getSquare(row, col).getGridId().toString())) {
+            for (int row = 0; row < gameBoard.getBoard().length; row++)
+            {
+                for (int col = 0; col < gameBoard.getBoard()[row].length; col++)
+                {
+                    if (button.getName().equals(gameBoard.getSquare(row, col).getGridId().toString()))
+                    {
                         String gridId = gameBoard.getSquare(row, col).getGridId().toString();
                         String gamePieceIdOnSquare = gameBoard.getSquare(row, col).getGamePieceIdOnSquare();
                         String gridName = gameBoard.getSquare(row, col).getGridName();
@@ -544,19 +588,24 @@ public class WarHilt {
                         button.setToolTipText(gameBoard.getSquare(row, col).getGridName());
 
                         System.out.println(gameBoard.getSquare(row, col).getSquareColor().toString());
-                        button.addActionListener(new ActionListener() {
+                        button.addActionListener(new ActionListener()
+                        {
                             @Override
-                            public void actionPerformed(ActionEvent e) {
+                            public void actionPerformed(ActionEvent e)
+                            {
                                 System.out.println();
                                 System.out.println("gridId " + gridId + " was pressed.");
                                 System.out.println("gamePieceIdOnSquare " + gamePieceIdOnSquare + " was pressed.");
                                 System.out.println("gridName " + gridName + " was pressed.");
                                 System.out.println("squareColor is " + defaultColor);
 
-                                if (button.getBackground() == Color.cyan) {
+                                if (button.getBackground() == Color.cyan)
+                                {
                                     //change to normal color
                                     button.setBackground(defaultColor);
-                                } else {
+                                }
+                                else
+                                {
                                     button.setBackground(Color.cyan);
                                 }
                             }
@@ -569,43 +618,58 @@ public class WarHilt {
         return gameBoard;
     }
 
-    private static GameBoard refreshSquareColors(GameBoard gameBoard, Color color1, Color color2, JPanel panel){
+    private static GameBoard refreshSquareColors(GameBoard gameBoard, Color color1, Color color2, JPanel panel)
+    {
 
         panel.removeAll();
 
-        for (int row = 0; row < gameBoard.getBoard().length; row++) {
-            if (row % 2 == 0) {
-                for (int col = 0; col < gameBoard.getBoard()[row].length; col++) {
-                    if (Integer.valueOf(gameBoard.getSquare(row, col).getGridId()) % 2 == 0) {
+        for (int row = 0; row < gameBoard.getBoard().length; row++)
+        {
+            if (row % 2 == 0)
+            {
+                for (int col = 0; col < gameBoard.getBoard()[row].length; col++)
+                {
+                    if (Integer.valueOf(gameBoard.getSquare(row, col).getGridId()) % 2 == 0)
+                    {
                         gameBoard.getSquare(row, col).setColor(color1);
                         System.out.println("gridId of square [" + row + "][" + col + "] is " + gameBoard.getSquare(row, col).getGridId());
                         System.out.println("color of refreshed square is " + gameBoard.getSquare(row, col).getSquareColor().toString());
-                    } else if (Integer.valueOf(gameBoard.getSquare(row, col).getGridId()) % 2 == 1) {
+                    }
+                    else if (Integer.valueOf(gameBoard.getSquare(row, col).getGridId()) % 2 == 1)
+                    {
                         gameBoard.getSquare(row, col).setColor(color2);
                         System.out.println("gridId of square [" + row + "][" + col + "] is " + gameBoard.getSquare(row, col).getGridId());
                         System.out.println("color of refreshed square is " + gameBoard.getSquare(row, col).getSquareColor().toString());
                     }
                 }
-            } else if (row % 2 == 1) {
-                    for (int col = 0; col < gameBoard.getBoard()[row].length; col++) {
-                        if (Integer.valueOf(gameBoard.getSquare(row, col).getGridId()) % 2 == 1) {
-                            gameBoard.getSquare(row, col).setColor(color1);
-                            System.out.println("gridId of square [" + row + "][" + col + "] is " + gameBoard.getSquare(row, col).getGridId());
-                            System.out.println("color of refreshed square is " + gameBoard.getSquare(row, col).getSquareColor().toString());
-                        } else  if (Integer.valueOf(gameBoard.getSquare(row, col).getGridId()) % 2 == 0) {
-                            gameBoard.getSquare(row, col).setColor(color2);
-                            System.out.println("gridId of square [" + row + "][" + col + "] is " + gameBoard.getSquare(row, col).getGridId());
-                            System.out.println("color of refreshed square is " + gameBoard.getSquare(row, col).getSquareColor().toString());
-                        }
+            }
+            else if (row % 2 == 1)
+            {
+                for (int col = 0; col < gameBoard.getBoard()[row].length; col++)
+                {
+                    if (Integer.valueOf(gameBoard.getSquare(row, col).getGridId()) % 2 == 1)
+                    {
+                        gameBoard.getSquare(row, col).setColor(color1);
+                        System.out.println("gridId of square [" + row + "][" + col + "] is " + gameBoard.getSquare(row, col).getGridId());
+                        System.out.println("color of refreshed square is " + gameBoard.getSquare(row, col).getSquareColor().toString());
                     }
+                    else  if (Integer.valueOf(gameBoard.getSquare(row, col).getGridId()) % 2 == 0)
+                    {
+                        gameBoard.getSquare(row, col).setColor(color2);
+                        System.out.println("gridId of square [" + row + "][" + col + "] is " + gameBoard.getSquare(row, col).getGridId());
+                        System.out.println("color of refreshed square is " + gameBoard.getSquare(row, col).getSquareColor().toString());
+                    }
+                }
             }
             panel.revalidate();
             panel.repaint();
         }
         return gameBoard;
-        /*this is updating the color of the game board squares, but need to actually change previous buttons rather than
-        drawing new additional ones below.  Also need to change the logic because evens and odds make a straight line of
-        the same color rather than staggering it.  You wrote notes about this somewhere.  Look them up B&W grid paper.
-        */
     }
+    /*
+    private String getImageIconPath()
+    {
+        //get the path to image icon dependent on colors chosen and piece name
+    }
+    */
 }

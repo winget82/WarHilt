@@ -1,6 +1,7 @@
 import javax.swing.*;
 
-public abstract class GamePiece {
+public abstract class GamePiece
+{
 
     //Attributes / Fields
     private String color;
@@ -10,9 +11,11 @@ public abstract class GamePiece {
     private Integer gamePieceId;//need to generate a unique ID for each game piece to be identified during game from 1-32
     private static Integer currentGamePieceId = 1;
     private ImageIcon icon;
+    private BoardSquare currentBoardSquare;
 
     //Constructor
-    public GamePiece(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon) {
+    public GamePiece(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon)
+    {
         this.color = color;
         this.name = name;
         this.currentGridCellColor = currentGridCellColor;
@@ -42,7 +45,20 @@ public abstract class GamePiece {
         this.color = color;
     }
 
-    abstract void movement();
-        //movement of piece, could be dependent on currentGridCellColor also, to simplify things
+    public BoardSquare getCurrentBoardSquare()
+    {
+        return currentBoardSquare;
+    }
 
+    public void setCurrentBoardSquare(BoardSquare boardSquare) {
+        this.currentBoardSquare = boardSquare;
+    }
+
+    abstract void possibleMoves();
+        //possible moves of piece
+
+    public void move()
+    {
+        //move piece, could be dependent on currentGridCellColor also, to simplify things
+    }
 }

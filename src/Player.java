@@ -1,6 +1,7 @@
 import java.awt.*;
 
-public class Player {
+public class Player
+{
     //This will be the object for the player(s) 1 or 2 player
 
     private Color playerColor;
@@ -22,7 +23,8 @@ public class Player {
 
     Player(Color playerColor, int archerCountNumber, int assassinCountNumber, int calvaryCountNumber,
                   int clericCountNumber, int infantryCountNumber, int jesterCountNumber, int pawnCountNumber,
-                  int poleArmCountNumber) {
+                  int poleArmCountNumber)
+    {
         this.playerColor = playerColor;
         this.archerCountNumber = archerCountNumber;
         this.assassinCountNumber = assassinCountNumber;
@@ -34,7 +36,8 @@ public class Player {
         this.poleArmCountNumber = poleArmCountNumber;
     }
 
-    public int getTotalPieceNumber() {
+    public int getTotalPieceNumber()
+    {
         return this.archerCountNumber + this.assassinCountNumber + this.calvaryCountNumber + this.clericCountNumber
                 + this.infantryCountNumber + this.jesterCountNumber + this.kingCountNumber + this.pawnCountNumber
                 + this.poleArmCountNumber + this.queenCountNumber;
@@ -48,9 +51,7 @@ public class Player {
         return playerColor;
     }
 
-    public int getArcherCountNumber() {
-        return archerCountNumber;
-    }
+    public int getArcherCountNumber() { return archerCountNumber; }
 
     public int getAssassinCountNumber() {
         return assassinCountNumber;
@@ -80,9 +81,7 @@ public class Player {
         return pawnCountNumber;
     }
 
-    public int getPoleArmCountNumber() {
-        return poleArmCountNumber;
-    }
+    public int getPoleArmCountNumber() { return poleArmCountNumber; }
 
     public int getQueenCountNumber() {
         return queenCountNumber;

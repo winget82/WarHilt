@@ -1,6 +1,7 @@
 import java.awt.*;
 
-public class BoardSquare {
+public class BoardSquare
+{
 
     ////Attributes / Fields
     //private String color = "White";
@@ -11,7 +12,8 @@ public class BoardSquare {
     private Color color;
 
     //Constructor
-    public BoardSquare(Color color, String gridName, Integer gridId) {
+    public BoardSquare(Color color, String gridName, Integer gridId)
+    {
         this.color = color;
         this.gridName = gridName;
         this.gridId = gridId;

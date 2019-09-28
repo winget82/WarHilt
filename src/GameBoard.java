@@ -1,6 +1,7 @@
 import java.awt.*;
 
-public class GameBoard {
+public class GameBoard
+{
 
     //Attributes / Fields
     Color color1;
@@ -8,7 +9,8 @@ public class GameBoard {
     BoardSquare[][] board = new BoardSquare[8][8];
 
     //Constructor
-    public GameBoard(Color color1, Color color2) {
+    public GameBoard(Color color1, Color color2)
+    {
 
         //Row 8
         board[0][0] = new BoardSquare(color1,"a8", 0);
@@ -100,7 +102,8 @@ public class GameBoard {
         return board[row][column];
     }
 
-    public void setColors(Color color1, Color color2) {
+    public void setColors(Color color1, Color color2)
+    {
         this.color1 = color1;
         this.color2 = color2;
     }
@@ -110,4 +113,9 @@ public class GameBoard {
     GameBoard.getSquare(1,3).getGridName()
     GameBoard.getSquare(1,3).setOccupied()
     */
+
+    /*
+    SEE THIS FOR IDEAS OF HOW TO GET MOVES
+    https://impythonist.wordpress.com/2017/01/01/modeling-a-chessboard-and-mechanics-of-its-pieces-in-python/
+     */
 }
