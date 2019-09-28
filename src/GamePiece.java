@@ -12,6 +12,7 @@ public abstract class GamePiece
     private static Integer currentGamePieceId = 1;
     private ImageIcon icon;
     private BoardSquare currentBoardSquare;
+    private String gridName;
 
     //Constructor
     public GamePiece(String color, String name, String currentGridCellColor)
@@ -21,6 +22,16 @@ public abstract class GamePiece
         this.currentGridCellColor = currentGridCellColor;
         this.isActive = true;
         this.gamePieceId = currentGamePieceId++;
+    }
+
+    public GamePiece(String color, String name, String currentGridCellColor, String gridName)
+    {
+        this.color = color;
+        this.name = name;
+        this.currentGridCellColor = currentGridCellColor;
+        this.isActive = true;
+        this.gamePieceId = currentGamePieceId++;
+        this.gridName = gridName;
     }
 
     //Behaviors
@@ -54,8 +65,14 @@ public abstract class GamePiece
         this.currentBoardSquare = boardSquare;
     }
 
+    public String getGridName() { return gridName; }
+
+    public void setGridName(String gridName) { this.gridName = gridName; }
+
     abstract void possibleMoves();
         //possible moves of piece
+
+        //when piece is selected, highlight possible move squares with bright yellow color
 
     public void move()
     {

@@ -6,9 +6,9 @@ public class Pawn extends GamePiece
     //Attributes / Fields
 
     //Constructor
-    public Pawn(String color, String name, String currentGridCellColor)//, ImageIcon gamePieceIcon)
+    public Pawn(String color, String name, String currentGridCellColor, String gridName)
     {
-        super(color, name, currentGridCellColor);//, gamePieceIcon);
+        super(color, name, currentGridCellColor, gridName);
     }
 
     @Override

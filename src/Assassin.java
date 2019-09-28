@@ -6,9 +6,9 @@ public class Assassin extends GamePiece
     //Attributes / Fields
 
     //Constructor
-    public Assassin(String color, String name, String currentGridCellColor)//, ImageIcon gamePieceIcon)
+    public Assassin(String color, String name, String currentGridCellColor, String gridName)
     {
-        super(color, name, currentGridCellColor);//, gamePieceIcon);
+        super(color, name, currentGridCellColor, gridName);
     }
 
     @Override

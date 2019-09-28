@@ -16,6 +16,7 @@ public class Player
     private int poleArmCountNumber = 0;
     private int queenCountNumber = 1;
     private int totalPieceNumber = 2;
+    private GamePiece[] pieceSet = new GamePiece[16];
 
     Player(Color playerColor) {
         this.playerColor = playerColor;
@@ -125,5 +126,13 @@ public class Player
 
     public void setQueenCountNumber(int queenCountNumber) {
         this.queenCountNumber = queenCountNumber;
+    }
+
+    public GamePiece[] getPieceSet() {
+        return pieceSet;
+    }
+
+    public void setPieceSet(GamePiece[] pieceSet) {
+        this.pieceSet = pieceSet;
     }
 }

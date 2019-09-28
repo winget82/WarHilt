@@ -6,9 +6,9 @@ public class King extends GamePiece
     //Attributes / Fields
 
     //Constructor
-    public King(String color, String name, String currentGridCellColor)//, ImageIcon gamePieceIcon)
+    public King(String color, String name, String currentGridCellColor, String gridName)
     {
-        super(color, name, currentGridCellColor);//, gamePieceIcon);
+        super(color, name, currentGridCellColor, gridName);
     }
 
     @Override

@@ -6,9 +6,9 @@ public class Jester extends GamePiece
     //Attributes / Fields
 
     //Constructor
-    public Jester(String color, String name, String currentGridCellColor)//, ImageIcon gamePieceIcon)
+    public Jester(String color, String name, String currentGridCellColor, String gridName)
     {
-        super(color, name, currentGridCellColor);//, gamePieceIcon);
+        super(color, name, currentGridCellColor, gridName);
 
     }
 

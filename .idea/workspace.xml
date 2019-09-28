@@ -3,17 +3,70 @@
   <component name="ChangeListManager">
     <list default="true" id="72dd394f-c56a-4c43-a1e5-7e95ebcae45d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/pieces/white/archerT_40px_h_o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/pieces/white/assassinT_40px_h_o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/pieces/white/calvaryT_40px_h_o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/pieces/white/clericT_40px_h_o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/pieces/white/infantryT_40px_h_o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/pieces/white/jesterT_40px_h_o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/pieces/white/kingT_40px_h_o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/pieces/white/pawnT_40px_h_o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/pieces/white/polearmT_40px_h_o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/pieces/white/queenT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/archer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/archerT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/archerT_40px_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/archerT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/assassin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/assassinT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/assassinT_40px_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/assassinT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/calvary.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/calvaryT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/calvaryT_40px_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/calvaryT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/cleric.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/clericT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/clericT_40px_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/clericT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/infantry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/infantryT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/infantryT_40px_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/infantryT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/jester.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/jesterT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/jesterT_40px_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/jesterT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/king.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/kingT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/kingT_40px_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/kingT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/pawn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/pawnT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/pawnT_40px_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/pawnT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/polearm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/polearmT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/polearmT_40px_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/polearmT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/queen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/queenT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/queenT_40px_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/black/queenT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/archerT_40px_h_o_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/assassinT_40px_h_o_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/calvaryT_40px_h_o_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/clericT_40px_h_o_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/infantryT_40px_h_o_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/jesterT_40px_h_o_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/kingT_40px_h_o_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/pawnT_40px_h_o_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/polearmT_40px_h_o_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/queenT_40px_h_o_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt$12.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Archer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assassin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assassin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calvary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calvary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cleric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cleric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GamePiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePiece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infantry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Jester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PoleArm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PoleArm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WarHilt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WarHilt.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

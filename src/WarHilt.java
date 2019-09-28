@@ -430,6 +430,90 @@ public class WarHilt {
         //Make a Button Group for color settings
         ButtonGroup colorBG = new ButtonGroup();
 
+
+
+        //testing (SET UP AS DEFAULT) purposes - this will have to be configured in the setup screen / window
+        //and populate the list of pieces for each player
+
+        Archer blackArcher1 = new Archer("black", "archer", "black", "a8");
+        blackArcher1.setIcon(new ImageIcon(getImageIconPath(blackArcher1)));
+        Archer blackArcher2 = new Archer("black", "archer", "black", "b8");
+        blackArcher2.setIcon(new ImageIcon(getImageIconPath(blackArcher2)));
+        Assassin blackAssassin = new Assassin("black", "assassin", "black", "c8");
+        blackAssassin.setIcon(new ImageIcon(getImageIconPath(blackAssassin)));
+        Calvary blackCalvary1 = new Calvary("black", "calvary", "black", "d8");
+        blackCalvary1.setIcon(new ImageIcon(getImageIconPath(blackCalvary1)));
+        Calvary blackCalvary2 = new Calvary("black", "calvary", "black", "e8");
+        blackCalvary2.setIcon(new ImageIcon(getImageIconPath(blackCalvary2)));
+        Cleric blackCleric1 = new Cleric("black", "cleric", "black", "f8");
+        blackCleric1.setIcon(new ImageIcon(getImageIconPath(blackCleric1)));
+        Cleric blackCleric2 = new Cleric("black", "cleric", "black", "g8");
+        blackCleric2.setIcon(new ImageIcon(getImageIconPath(blackCleric2)));
+        Infantry blackInfantry1 = new Infantry("black", "infantry", "black", "h8");
+        blackInfantry1.setIcon(new ImageIcon(getImageIconPath(blackInfantry1)));
+        Infantry blackInfantry2 = new Infantry("black", "infantry", "black", "a7");
+        blackInfantry2.setIcon(new ImageIcon(getImageIconPath(blackInfantry2)));
+        Jester blackJester1 = new Jester("black", "jester", "black", "b7");
+        blackJester1.setIcon(new ImageIcon(getImageIconPath(blackJester1)));
+        Jester blackJester2 = new Jester("black", "jester", "black", "c7");
+        blackJester2.setIcon(new ImageIcon(getImageIconPath(blackJester2)));
+        King blackKing = new King("black", "king", "black", "d7");
+        blackKing.setIcon(new ImageIcon(getImageIconPath(blackKing)));
+        Pawn blackPawn1 = new Pawn("black", "pawn", "black", "e7");
+        blackPawn1.setIcon(new ImageIcon(getImageIconPath(blackPawn1)));
+        Pawn blackPawn2 = new Pawn("black", "pawn", "black", "f7");
+        blackPawn2.setIcon(new ImageIcon(getImageIconPath(blackPawn2)));
+        PoleArm blackPoleArm = new PoleArm("black", "polearm", "black", "g7");
+        blackPoleArm.setIcon(new ImageIcon(getImageIconPath(blackPoleArm)));
+        Queen blackQueen = new Queen("black", "queen", "black", "h7");
+        blackQueen.setIcon(new ImageIcon(getImageIconPath(blackQueen)));
+
+        Archer whiteArcher1 = new Archer("white", "archer", "white", "a1");
+        whiteArcher1.setIcon(new ImageIcon(getImageIconPath(whiteArcher1)));
+        Archer whiteArcher2 = new Archer("white", "archer", "white", "b1");
+        whiteArcher2.setIcon(new ImageIcon(getImageIconPath(whiteArcher2)));
+        Assassin whiteAssassin = new Assassin("white", "assassin", "white", "c1");
+        whiteAssassin.setIcon(new ImageIcon(getImageIconPath(whiteAssassin)));
+        Calvary whiteCalvary1 = new Calvary("white", "calvary", "white", "d1");
+        whiteCalvary1.setIcon(new ImageIcon(getImageIconPath(whiteCalvary1)));
+        Calvary whiteCalvary2 = new Calvary("white", "calvary", "white", "e1");
+        whiteCalvary2.setIcon(new ImageIcon(getImageIconPath(whiteCalvary2)));
+        Cleric whiteCleric1 = new Cleric("white", "cleric", "white", "f1");
+        whiteCleric1.setIcon(new ImageIcon(getImageIconPath(whiteCleric1)));
+        Cleric whiteCleric2 = new Cleric("white", "cleric", "white", "g1");
+        whiteCleric2.setIcon(new ImageIcon(getImageIconPath(whiteCleric2)));
+        Infantry whiteInfantry1 = new Infantry("white", "infantry", "white", "h1");
+        whiteInfantry1.setIcon(new ImageIcon(getImageIconPath(whiteInfantry1)));
+        Infantry whiteInfantry2 = new Infantry("white", "infantry", "white", "a2");
+        whiteInfantry2.setIcon(new ImageIcon(getImageIconPath(whiteInfantry2)));
+        Jester whiteJester1 = new Jester("white", "jester", "white", "b2");
+        whiteJester1.setIcon(new ImageIcon(getImageIconPath(whiteJester1)));
+        Jester whiteJester2 = new Jester("white", "jester", "white", "c2");
+        whiteJester2.setIcon(new ImageIcon(getImageIconPath(whiteJester2)));
+        King whiteKing = new King("white", "king", "white", "d2");
+        whiteKing.setIcon(new ImageIcon(getImageIconPath(whiteKing)));
+        Pawn whitePawn1 = new Pawn("white", "pawn", "white", "e2");
+        whitePawn1.setIcon(new ImageIcon(getImageIconPath(whitePawn1)));
+        Pawn whitePawn2 = new Pawn("white", "pawn", "white","f2");
+        whitePawn2.setIcon(new ImageIcon(getImageIconPath(whitePawn2)));
+        PoleArm whitePoleArm = new PoleArm("white", "polearm", "white", "g2");
+        whitePoleArm.setIcon(new ImageIcon(getImageIconPath(whitePoleArm)));
+        Queen whiteQueen = new Queen("white", "queen", "white", "h2");
+        whiteQueen.setIcon(new ImageIcon(getImageIconPath(whiteQueen)));
+
+        Player player1 = new Player(Color.black, 2,1,2,2,2,2,2,1);
+        Player player2 = new Player(Color.white, 2,1,2,2,2,2,2,1);
+
+        player1.setPieceSet(new GamePiece[]{blackArcher1, blackArcher2, blackAssassin, blackCalvary1, blackCalvary2,
+                blackCleric1, blackCleric2, blackInfantry1, blackInfantry2, blackJester1, blackJester2, blackPawn1,
+                blackPawn2, blackPoleArm, blackKing, blackQueen});
+
+        player2.setPieceSet(new GamePiece[]{whiteArcher1, whiteArcher2, whiteAssassin, whiteCalvary1, whiteCalvary2,
+                whiteCleric1, whiteCleric2, whiteInfantry1, whiteInfantry2, whiteJester1, whiteJester2, whitePawn1,
+                whitePawn2, whitePoleArm, whiteKing, whiteQueen});
+
+
+
         colorBG.add(whiteBlack);
         whiteBlack.addActionListener(new ActionListener()
         {
@@ -438,7 +522,7 @@ public class WarHilt {
             {
                 gameBoard.setColors(Color.WHITE, Color.BLACK);
                 refreshSquareColors(gameBoard, Color.WHITE, Color.BLACK, panel);
-                drawButtons(gameBoard, panel);
+                drawButtons(gameBoard, panel, player1.getPieceSet(), player2.getPieceSet());
             }
         });
 
@@ -450,7 +534,7 @@ public class WarHilt {
             {
                 gameBoard.setColors(Color.RED, Color.BLACK);
                 refreshSquareColors(gameBoard, Color.RED, Color.BLACK, panel);
-                drawButtons(gameBoard, panel);
+                drawButtons(gameBoard, panel, player1.getPieceSet(), player2.getPieceSet());
             }
         });
 
@@ -462,7 +546,7 @@ public class WarHilt {
             {
                 gameBoard.setColors(Color.WHITE, Color.BLUE);
                 refreshSquareColors(gameBoard, Color.WHITE, Color.BLUE, panel);
-                drawButtons(gameBoard, panel);
+                drawButtons(gameBoard, panel, player1.getPieceSet(), player2.getPieceSet());
             }
         });
 
@@ -474,7 +558,7 @@ public class WarHilt {
             {
                 gameBoard.setColors(Color.WHITE, new Color(0, 100, 0));
                 refreshSquareColors(gameBoard, Color.WHITE, new Color(0, 100, 0), panel);
-                drawButtons(gameBoard, panel);
+                drawButtons(gameBoard, panel, player1.getPieceSet(), player2.getPieceSet());
             }
         });
 
@@ -486,7 +570,7 @@ public class WarHilt {
             {
                 gameBoard.setColors(new Color(0, 100, 0), Color.BLACK);
                 refreshSquareColors(gameBoard, new Color(0, 100, 0), Color.BLACK, panel);
-                drawButtons(gameBoard, panel);
+                drawButtons(gameBoard, panel, player1.getPieceSet(), player2.getPieceSet());
             }
         });
 
@@ -498,7 +582,7 @@ public class WarHilt {
             {
                 gameBoard.setColors(new Color(192, 192, 192), Color.BLACK);
                 refreshSquareColors(gameBoard, new Color(192, 192, 192), Color.BLACK, panel);
-                drawButtons(gameBoard, panel);
+                drawButtons(gameBoard, panel, player1.getPieceSet(), player2.getPieceSet());
             }
         });
 
@@ -510,7 +594,7 @@ public class WarHilt {
             {
                 gameBoard.setColors(new Color(218, 165, 32), new Color(128, 0, 128));
                 refreshSquareColors(gameBoard, new Color(218, 165, 32), new Color(128, 0, 128), panel);
-                drawButtons(gameBoard, panel);
+                drawButtons(gameBoard, panel, player1.getPieceSet(), player2.getPieceSet());
             }
         });
 
@@ -522,7 +606,7 @@ public class WarHilt {
             {
                 gameBoard.setColors(new Color(240, 248, 255), new Color(47, 79, 79));
                 refreshSquareColors(gameBoard, new Color(240, 248, 255), new Color(47, 79, 79), panel);
-                drawButtons(gameBoard, panel);
+                drawButtons(gameBoard, panel, player1.getPieceSet(), player2.getPieceSet());
             }
         });
 
@@ -534,7 +618,7 @@ public class WarHilt {
             {
                 gameBoard.setColors(new Color(238, 232, 170), new Color(165, 42, 42));
                 refreshSquareColors(gameBoard, new Color(238, 232, 170), new Color(165, 42, 42), panel);
-                drawButtons(gameBoard, panel);
+                drawButtons(gameBoard, panel, player1.getPieceSet(), player2.getPieceSet());
             }
         });
 
@@ -544,7 +628,7 @@ public class WarHilt {
         frame.setJMenuBar(menuBar);
 
         //Draw the game board
-        WarHilt.drawButtons(gameBoard, panel);
+        WarHilt.drawButtons(gameBoard, panel, player1.getPieceSet(), player2.getPieceSet());
 
         frame.getContentPane().add(BorderLayout.CENTER, panel);
         frame.getContentPane().add(BorderLayout.NORTH, menuBar);
@@ -553,7 +637,7 @@ public class WarHilt {
         frame.setVisible(true);
     }
 
-    private static GameBoard drawButtons(GameBoard gameBoard, JPanel panel)
+    private static GameBoard drawButtons(GameBoard gameBoard, JPanel panel, GamePiece[] player1PieceSet, GamePiece[] player2PieceSet)
     {
 
         //Add buttons to frame
@@ -561,16 +645,25 @@ public class WarHilt {
         {
             String buttonName = Integer.toString(i);
 
-            //Icon testing - this will need moved out of loop
+            /*
+            //Icon testing - this will need moved out of this loop (and prior to game loop?)
             //ImageIcon king = new ImageIcon("./icons/pieces/black/kingT_40px_h.png");
-            King king = new King("black", "king","black");
+            King king = new King("white", "king","white", "a8");
             king.setIcon(new ImageIcon(getImageIconPath(king)));
+
 
             //This will probably need to be in the loop the game board is drawn in
             JButton button = new JButton(buttonName, king.getIcon());
             // this will need to set the GamePiece.icon for each piece chosen dependent on colors chosen
+            // use Player.pieceSet similar to GameBoard with BoardSquare to have all the pieces
+            // set for the game passed into this to draw them
+            */
+
+
+            JButton button = new JButton();
 
             button.setName(buttonName);
+            button.setText(" ");//get rid of number (buttonName) from each square
 
             //Add buttons with correct color
             for (int row = 0; row < gameBoard.getBoard().length; row++)
@@ -589,6 +682,25 @@ public class WarHilt {
                         button.setToolTipText(gameBoard.getSquare(row, col).getGamePieceNameByIdOnSquare());
                         */
                         button.setToolTipText(gameBoard.getSquare(row, col).getGridName());
+
+
+                        //Draw in pieces based on Grid Name, not working...
+                        for(int p1=0; p1 < player1PieceSet.length; p1++)
+                        {
+                            if (player1PieceSet[p1].getGridName().equals(gridName))
+                            {
+                                button.setIcon(player1PieceSet[p1].getIcon());
+                            }
+                        }
+
+                        for(int p2=0; p2 < player2PieceSet.length; p2++)
+                        {
+                            if (player2PieceSet[p2].getGridName().equals(gridName))
+                            {
+                                button.setIcon(player2PieceSet[p2].getIcon());
+                            }
+                        }
+
 
                         System.out.println(gameBoard.getSquare(row, col).getSquareColor().toString());
                         button.addActionListener(new ActionListener()
