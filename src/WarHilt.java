@@ -562,8 +562,12 @@ public class WarHilt {
             String buttonName = Integer.toString(i);
 
             //Icon testing
-            ImageIcon king = new ImageIcon("./icons/pieces/black/kingT_40px_h.png");
-            JButton button = new JButton(buttonName, king);
+            //ImageIcon king = new ImageIcon("./icons/pieces/black/kingT_40px_h.png");
+            King king = new King("black", "king","black");
+            king.setIcon(new ImageIcon(getImageIconPath(king)));
+
+            //This will probably need to be in the loop the game board is drawn in
+            JButton button = new JButton(buttonName, king.getIcon());
             // this will need to set the GamePiece.icon for each piece chosen dependent on colors chosen
             //probably here in main code not in the individual pieces
 
@@ -666,10 +670,11 @@ public class WarHilt {
         }
         return gameBoard;
     }
-    /*
-    private String getImageIconPath()
+
+    public static String getImageIconPath(GamePiece gamePiece)
     {
         //get the path to image icon dependent on colors chosen and piece name
+        return "./icons/pieces/" + gamePiece.getColor() + "/" + gamePiece.name + "T_40px_h.png";
     }
-    */
+
 }

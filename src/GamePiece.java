@@ -14,12 +14,11 @@ public abstract class GamePiece
     private BoardSquare currentBoardSquare;
 
     //Constructor
-    public GamePiece(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon)
+    public GamePiece(String color, String name, String currentGridCellColor)
     {
         this.color = color;
         this.name = name;
         this.currentGridCellColor = currentGridCellColor;
-        this.icon = gamePieceIcon;
         this.isActive = true;
         this.gamePieceId = currentGamePieceId++;
     }
@@ -45,10 +44,11 @@ public abstract class GamePiece
         this.color = color;
     }
 
-    public BoardSquare getCurrentBoardSquare()
-    {
-        return currentBoardSquare;
-    }
+    public BoardSquare getCurrentBoardSquare() { return currentBoardSquare; }
+
+    public ImageIcon getIcon() { return icon; }
+
+    public void setIcon(ImageIcon icon) {this.icon = icon;}
 
     public void setCurrentBoardSquare(BoardSquare boardSquare) {
         this.currentBoardSquare = boardSquare;

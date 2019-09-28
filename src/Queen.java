@@ -6,9 +6,9 @@ public class Queen extends GamePiece
     //Attributes / Fields
 
     //Constructor
-    public Queen(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon)
+    public Queen(String color, String name, String currentGridCellColor)//, ImageIcon gamePieceIcon)
     {
-        super(color, name, currentGridCellColor, gamePieceIcon);
+        super(color, name, currentGridCellColor);//, gamePieceIcon);
     }
 
     @Override

@@ -6,9 +6,9 @@ public class Infantry extends GamePiece
     //Attributes / Fields
 
     //Constructor
-    public Infantry(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon)
+    public Infantry(String color, String name, String currentGridCellColor)//, ImageIcon gamePieceIcon)
     {
-        super(color, name, currentGridCellColor, gamePieceIcon);
+        super(color, name, currentGridCellColor);//, gamePieceIcon);
     }
 
     @Override

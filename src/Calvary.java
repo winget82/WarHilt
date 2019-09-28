@@ -6,9 +6,9 @@ public class Calvary extends GamePiece
     //Attributes / Fields
 
     //Constructor
-    public Calvary(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon)
+    public Calvary(String color, String name, String currentGridCellColor)//, ImageIcon gamePieceIcon)
     {
-        super(color, name, currentGridCellColor, gamePieceIcon);
+        super(color, name, currentGridCellColor);//, gamePieceIcon);
     }
 
     @Override

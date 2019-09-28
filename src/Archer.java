@@ -6,9 +6,9 @@ public class Archer extends GamePiece
     //Attributes / Fields
 
     //Constructor
-    public Archer(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon)
+    public Archer(String color, String name, String currentGridCellColor)//, ImageIcon gamePieceIcon)
     {
-        super(color, name, currentGridCellColor, gamePieceIcon);
+        super(color, name, currentGridCellColor);//, gamePieceIcon);
     }
 
     @Override

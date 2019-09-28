@@ -6,9 +6,9 @@ public class PoleArm extends GamePiece
     //Attributes / Fields
 
     //Constructor
-    public PoleArm(String color, String name, String currentGridCellColor, ImageIcon gamePieceIcon)
+    public PoleArm(String color, String name, String currentGridCellColor)//, ImageIcon gamePieceIcon)
     {
-        super(color, name, currentGridCellColor, gamePieceIcon);
+        super(color, name, currentGridCellColor);//, gamePieceIcon);
     }
 
     @Override
