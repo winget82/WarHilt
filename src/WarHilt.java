@@ -673,7 +673,7 @@ public class WarHilt {
     public static String getImageIconPath(GamePiece gamePiece)
     {
         //get the path to image icon dependent on colors chosen and piece name
-        return "./icons/pieces/" + gamePiece.getColor() + "/" + gamePiece.name + "T_40px_h_o.png";
+        return "./icons/pieces/" + gamePiece.getColor() + "/" + gamePiece.name + "T_40px_h_o_" + gamePiece.getColor() + ".png";
     }
 
 }

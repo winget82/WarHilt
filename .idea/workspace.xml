@@ -3,7 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="72dd394f-c56a-4c43-a1e5-7e95ebcae45d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/icons/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/archerT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/assassinT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/calvaryT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/clericT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/infantryT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/jesterT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/kingT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/pawnT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/polearmT_40px_h_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/pieces/white/queenT_40px_h_o.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WarHilt/WarHilt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WarHilt/WarHilt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WarHilt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WarHilt.java" afterDir="false" />
     </list>
