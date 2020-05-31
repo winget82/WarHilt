@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import javax.swing.UIManager.*;
 
 public class WarHilt {
 
@@ -37,6 +38,18 @@ public class WarHilt {
 
     public static void main(String[] args)
     {
+        //for colors of buttons to work correctly on mac osx
+        try {
+            for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            // If Nimbus is not available, you can set the GUI to another look and feel.
+        }
+
         System.out.println("Welcome to War Hilt.  A simple war game.");
 
         GameBoard gameBoard = new GameBoard(Color.WHITE, Color.BLACK);
