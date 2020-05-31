@@ -23,5 +23,9 @@ public class Calvary extends GamePiece
 
         //get current square of piece
         //determine possible moves
+        /*
+        Something to the effect of
+        [row-2, col] or [row+2, col]
+         */
     }
 }

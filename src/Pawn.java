@@ -23,5 +23,10 @@ public class Pawn extends GamePiece
 
         //get current square of piece
         //determine possible moves
+        /*
+        Something to the effect of
+        [row-1, col], [row+1, col], [row, col-1], [row, col+1]
+        [row-1, col-1], [row-1, col+1], [row+1, col-1], [row+1, col+1]
+         */
     }
 }

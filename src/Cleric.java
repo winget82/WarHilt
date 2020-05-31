@@ -22,5 +22,9 @@ public class Cleric extends GamePiece
 
         //get current square of piece
         //determine possible moves
+        /*
+        Something to the effect of (while less than gameboard size and >= 0)
+        [row-1, col+1], [row+1, col+1], [row-1, col-1], [row+1, col-1]
+         */
     }
 }

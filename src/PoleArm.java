@@ -22,5 +22,9 @@ public class PoleArm extends GamePiece
 
         //get current square of piece
         //determine possible moves
+        /*
+        Something to the effect of (while less than gameboard size and >= 0)
+        [row-1, col], [row+1, col], [row, col-1], [row, col+1]
+         */
     }
 }

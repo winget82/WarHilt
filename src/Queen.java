@@ -22,5 +22,8 @@ public class Queen extends GamePiece
 
         //get current square of piece
         //determine possible moves
+        /*
+        utilize moves from polearm and cleric (rook and bishop)
+         */
     }
 }
