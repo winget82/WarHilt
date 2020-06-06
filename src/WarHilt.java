@@ -4,6 +4,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Collection;
 import javax.swing.UIManager.*;
 
@@ -54,6 +56,8 @@ public class WarHilt {
         System.out.println("Welcome to War Hilt.  A simple war game.");
 
         GameBoard gameBoard = new GameBoard(Color.WHITE, Color.BLACK);
+
+        //ArrayList<JButton> jButtonsArrayList = new ArrayList<>();
 
         //Make the Frame
         JFrame frame = new JFrame("War Hilt");
@@ -658,6 +662,7 @@ public class WarHilt {
 
     private static GameBoard drawButtons(GameBoard gameBoard, JPanel panel, GamePiece[] player1PieceSet, GamePiece[] player2PieceSet)
     {
+        ArrayList<JButton> jButtonsArrayList = new ArrayList<>();
 
         //Add buttons to frame
         for(int i=0; i < 64; i++)
@@ -754,6 +759,22 @@ public class WarHilt {
                                         possibleMoves = player1PieceSet[mp1].possibleMoves(gameBoard);
 
                                         //if possible move turn button yellow
+                                        for (BoardSquare move : possibleMoves)
+                                        {
+                                            for (JButton button : jButtonsArrayList)
+                                            {
+                                                Color squareColor = button.getBackground();
+
+                                                if ((button.getName().equals(gameBoard.getSquare(move.convertGrid()[0], move.convertGrid()[1]).getGridId().toString())))
+                                                {
+                                                    button.setBackground(Color.yellow);
+                                                }
+                                                else
+                                                {
+                                                    button.setBackground(squareColor);
+                                                }
+                                            }
+                                        }
                                     }
                                 }
 
@@ -764,25 +785,45 @@ public class WarHilt {
                                         possibleMoves = player2PieceSet[mp2].possibleMoves(gameBoard);
 
                                         //if possible move turn button yellow
+                                        for (BoardSquare move : possibleMoves)
+                                        {
+                                            for (JButton button : jButtonsArrayList)
+                                            {
+                                                Color currentSquareColor = button.getBackground();
+
+                                                if ((button.getName().equals(gameBoard.getSquare(move.convertGrid()[0], move.convertGrid()[1]).getGridId().toString())))
+                                                {
+                                                    button.setBackground(Color.yellow);
+                                                }
+                                                else
+                                                {
+                                                    button.setBackground(currentSquareColor);
+                                                }
+                                            }
+                                        }
                                     }
                                 }
 
                                 if (button.getBackground() == Color.cyan)
                                 {
-                                    //change to normal color
                                     button.setBackground(defaultColor);
+                                    //set all colors back to default
                                 }
                                 else
                                 {
                                     button.setBackground(Color.cyan);
+                                    //set all buttons back to default colors that aren't current possible moves
                                 }
+
                             }
                         });
                     }
                     panel.add(button);
+                    jButtonsArrayList.add(button);
                 }
             }
         }
+
         return gameBoard;
     }
 
