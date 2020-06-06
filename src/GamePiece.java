@@ -1,4 +1,7 @@
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public abstract class GamePiece
 {
@@ -8,7 +11,7 @@ public abstract class GamePiece
     public String name;
     private Boolean isActive;
     private String currentGridCellColor;
-    private Integer gamePieceId;//need to generate a unique ID for each game piece to be identified during game from 1-32
+    private Integer gamePieceId;//generate a unique ID for each game piece to be identified during game from 1-32
     private static Integer currentGamePieceId = 1;
     private ImageIcon icon;
     private BoardSquare currentBoardSquare;
@@ -71,8 +74,8 @@ public abstract class GamePiece
 
     public String getName() {return name;}
 
-    abstract void possibleMoves();
-        //possible moves of piece
+    abstract Collection<BoardSquare> possibleMoves(GameBoard gameBoard);
+        //get location of gamepiece
 
         //when piece is selected, highlight possible move squares with bright yellow color
 

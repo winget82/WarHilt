@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.util.Collection;
 import javax.swing.UIManager.*;
 
 public class WarHilt {
@@ -705,6 +706,7 @@ public class WarHilt {
                                 button.setIcon(player1PieceSet[p1].getIcon());
                                 gameBoard.getSquare(row, col).setGamePieceNameOnSquare(player1PieceSet[p1].getName());
                                 gameBoard.getSquare(row, col).setGamePieceIdOnSquare(player1PieceSet[p1].getGamePieceId());
+                                player1PieceSet[p1].setCurrentBoardSquare(gameBoard.getSquare(row, col));
                             }
                         }
 
@@ -715,6 +717,7 @@ public class WarHilt {
                                 button.setIcon(player2PieceSet[p2].getIcon());
                                 gameBoard.getSquare(row, col).setGamePieceNameOnSquare(player2PieceSet[p2].getName());
                                 gameBoard.getSquare(row, col).setGamePieceIdOnSquare(player2PieceSet[p2].getGamePieceId());
+                                player2PieceSet[p2].setCurrentBoardSquare(gameBoard.getSquare(row, col));
                             }
                         }
 
@@ -727,6 +730,7 @@ public class WarHilt {
                                 "<br/>" + gameBoard.getSquare(row, col).getGamePieceNameOnSquare() + "<html>");
 
                         System.out.println(gameBoard.getSquare(row, col).getSquareColor().toString());
+
                         button.addActionListener(new ActionListener()
                         {
                             @Override
@@ -738,6 +742,30 @@ public class WarHilt {
                                 System.out.println("gamePieceNameOnSquare " + gamePieceNameOnSquare + " was pressed.");
                                 System.out.println("gridName " + gridName + " was pressed.");
                                 System.out.println("squareColor is " + defaultColor);
+
+
+                                //get moves of the piece piece.possibleMoves()
+                                Collection<BoardSquare> possibleMoves;
+
+                                for(int mp1=0; mp1 < player1PieceSet.length; mp1++)
+                                {
+                                    if (player1PieceSet[mp1].getGamePieceId().toString().equals(gamePieceIdOnSquare))
+                                    {
+                                        possibleMoves = player1PieceSet[mp1].possibleMoves(gameBoard);
+
+                                        //if possible move turn button yellow
+                                    }
+                                }
+
+                                for(int mp2=0; mp2 < player2PieceSet.length; mp2++)
+                                {
+                                    if (player2PieceSet[mp2].getGamePieceId().toString().equals(gamePieceIdOnSquare))
+                                    {
+                                        possibleMoves = player2PieceSet[mp2].possibleMoves(gameBoard);
+
+                                        //if possible move turn button yellow
+                                    }
+                                }
 
                                 if (button.getBackground() == Color.cyan)
                                 {
