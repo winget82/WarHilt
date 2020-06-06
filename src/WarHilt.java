@@ -416,6 +416,11 @@ public class WarHilt {
         optionsMenu.setMnemonic(KeyEvent.VK_T);
         optionsMenu.getAccessibleContext().setAccessibleDescription("This is the options menu for the game settings");
 
+
+        /*
+        Update colors menu to have sub menus - board colors & piece colors
+        Could also add color settings for piece selected and possible moves squares
+         */
         JMenu optionsMenu_Colors = new JMenu("Colors");
         optionsMenu_Colors.getAccessibleContext().setAccessibleDescription("Color settings");
         optionsMenu_Colors.setToolTipText("Change colors of game");
@@ -686,23 +691,20 @@ public class WarHilt {
                     if (button.getName().equals(gameBoard.getSquare(row, col).getGridId().toString()))
                     {
                         String gridId = gameBoard.getSquare(row, col).getGridId().toString();
-                        String gamePieceIdOnSquare = gameBoard.getSquare(row, col).getGamePieceIdOnSquare();
                         String gridName = gameBoard.getSquare(row, col).getGridName();
                         Color defaultColor = gameBoard.getSquare(row, col).getSquareColor();
                         button.setBackground(defaultColor);
-                        /*
-                        Have tool tip to tell you the name of the game piece on the current square along with grid name
-                        button.setToolTipText(gameBoard.getSquare(row, col).getGamePieceNameByIdOnSquare());
-                        */
-                        button.setToolTipText(gameBoard.getSquare(row, col).getGridName());
+                        gameBoard.getSquare(row, col).setGamePieceIdOnSquare(0);
 
 
-                        //Draw in pieces based on Grid Name, not working...
+                        //Draw in pieces based on Grid Name
                         for(int p1=0; p1 < player1PieceSet.length; p1++)
                         {
                             if (player1PieceSet[p1].getGridName().equals(gridName))
                             {
                                 button.setIcon(player1PieceSet[p1].getIcon());
+                                gameBoard.getSquare(row, col).setGamePieceNameOnSquare(player1PieceSet[p1].getName());
+                                gameBoard.getSquare(row, col).setGamePieceIdOnSquare(player1PieceSet[p1].getGamePieceId());
                             }
                         }
 
@@ -711,9 +713,18 @@ public class WarHilt {
                             if (player2PieceSet[p2].getGridName().equals(gridName))
                             {
                                 button.setIcon(player2PieceSet[p2].getIcon());
+                                gameBoard.getSquare(row, col).setGamePieceNameOnSquare(player2PieceSet[p2].getName());
+                                gameBoard.getSquare(row, col).setGamePieceIdOnSquare(player2PieceSet[p2].getGamePieceId());
                             }
                         }
 
+                        String gamePieceIdOnSquare = gameBoard.getSquare(row, col).getGamePieceIdOnSquare().toString();
+                        String gamePieceNameOnSquare = gameBoard.getSquare(row, col).getGamePieceNameOnSquare();
+
+                        //Have tool tip to tell you the name of the game piece on the current square along with grid name
+                        button.setToolTipText("<html>Grid: " + gameBoard.getSquare(row, col).getGridName() +
+                                "<br/>Id: " + gameBoard.getSquare(row, col).getGamePieceIdOnSquare() +
+                                "<br/>" + gameBoard.getSquare(row, col).getGamePieceNameOnSquare() + "<html>");
 
                         System.out.println(gameBoard.getSquare(row, col).getSquareColor().toString());
                         button.addActionListener(new ActionListener()
@@ -724,6 +735,7 @@ public class WarHilt {
                                 System.out.println();
                                 System.out.println("gridId " + gridId + " was pressed.");
                                 System.out.println("gamePieceIdOnSquare " + gamePieceIdOnSquare + " was pressed.");
+                                System.out.println("gamePieceNameOnSquare " + gamePieceNameOnSquare + " was pressed.");
                                 System.out.println("gridName " + gridName + " was pressed.");
                                 System.out.println("squareColor is " + defaultColor);
 
@@ -802,3 +814,6 @@ public class WarHilt {
     }
 
 }
+/*
+REFACTOR CODE TO BE CLEANER AND MORE EFFICIENT AFTER ALL IS WORKING
+ */

@@ -7,7 +7,8 @@ public class BoardSquare
     //private String color = "White";
     private String gridName = "square";
     private Boolean isOccupied;
-    private String gamePieceIdOnSquare;
+    private Integer gamePieceIdOnSquare;
+    private String gamePieceNameOnSquare;
     private Integer gridId;
     private Color color;
 
@@ -18,7 +19,6 @@ public class BoardSquare
         this.gridName = gridName;
         this.gridId = gridId;
         this.isOccupied = false;
-
     }
 
     public Color getSquareColor() {
@@ -45,12 +45,12 @@ public class BoardSquare
         isOccupied = occupied;
     }
 
-    public String getGamePieceIdOnSquare() {
+    public Integer getGamePieceIdOnSquare() {
         return gamePieceIdOnSquare;
     }
 
-    public void setGamePieceIdOnSquare(String gamePieceId) {
-        this.gamePieceIdOnSquare = gamePieceId;
+    public void setGamePieceIdOnSquare(Integer gamePieceIdOnSquare) {
+        this.gamePieceIdOnSquare = gamePieceIdOnSquare;
     }
 
     public Integer getGridId() {
@@ -60,9 +60,13 @@ public class BoardSquare
     public void setGridId(Integer gridId) {
         this.gridId = gridId;
     }
-    /*
-    public String getGamePieceNameByIdOnSquare(String gamePieceIdOnSquare, GamePiece gamePiece) {
-        //figure out some logic here to return the name of the gamePiece by its ID using the ID of the game piece on the square
+
+    public String getGamePieceNameOnSquare()
+    {
+        return gamePieceNameOnSquare;
     }
-    */
+
+    public void setGamePieceNameOnSquare(String gamePieceNameOnSquare) {
+        this.gamePieceNameOnSquare = gamePieceNameOnSquare;
+    }
 }

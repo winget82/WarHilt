@@ -69,13 +69,17 @@ public abstract class GamePiece
 
     public void setGridName(String gridName) { this.gridName = gridName; }
 
+    public String getName() {return name;}
+
     abstract void possibleMoves();
         //possible moves of piece
 
         //when piece is selected, highlight possible move squares with bright yellow color
 
+        //when piece is selected, highlight possible capture squares with red color
+
     public void move()
     {
-        //move piece, could be dependent on currentGridCellColor also, to simplify things
+        //move piece
     }
 }
