@@ -31,17 +31,92 @@ public class Infantry extends GamePiece
         //determine possible moves
         //possible moves of piece
         List<BoardSquare> possibleMoves = new ArrayList<>();
-        int[][] moves = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
+        int a = location.convertGrid()[0];//location.convertGrid() + gameBoard.getSquare(move[0], move[1])
+        int b = location.convertGrid()[1];
 
-        for(int[] move : moves) {
-            int a = location.convertGrid()[0];//location.convertGrid() + gameBoard.getSquare(move[0], move[1])
-            int b = location.convertGrid()[1];
-
-            int c = a + move[0];
-            int d = b + move[1];
+        for (int i = 0; i<=2; i++)
+        {
+            int c = a + i;
+            int d = b + i;
 
             if ((c >= 0 && c <= 7) && (d >= 0 && d <= 7))
             {
+                BoardSquare possibleMove = gameBoard.getSquare(c, d);
+                possibleMoves.add(possibleMove);
+            }
+        }
+
+        for (int i = 0; i<=2; i++) {
+            int c = a - i;
+            int d = b - i;
+
+            if ((c >= 0 && c <= 7) && (d >= 0 && d <= 7)) {
+                BoardSquare possibleMove = gameBoard.getSquare(c, d);
+                possibleMoves.add(possibleMove);
+            }
+        }
+
+        for (int i = 0; i<=2; i++)
+        {
+            int c = a - i;
+            int d = b + i;
+
+            if ((c >= 0 && c <= 7) && (d >= 0 && d <= 7))
+            {
+                BoardSquare possibleMove = gameBoard.getSquare(c, d);
+                possibleMoves.add(possibleMove);
+            }
+        }
+
+        for (int i = 0; i<=2; i++) {
+            int c = a + i;
+            int d = b - i;
+
+            if ((c >= 0 && c <= 7) && (d >= 0 && d <= 7)) {
+                BoardSquare possibleMove = gameBoard.getSquare(c, d);
+                possibleMoves.add(possibleMove);
+            }
+        }
+
+        for (int i = 0; i<=2; i++)
+        {
+            int c = a + i;
+            int d = b;
+
+            if ((c >= 0 && c <= 7) && (d >= 0 && d <= 7))
+            {
+                BoardSquare possibleMove = gameBoard.getSquare(c, d);
+                possibleMoves.add(possibleMove);
+            }
+        }
+
+        for (int i = 0; i<=2; i++) {
+            int c = a - i;
+            int d = b;
+
+            if ((c >= 0 && c <= 7) && (d >= 0 && d <= 7)) {
+                BoardSquare possibleMove = gameBoard.getSquare(c, d);
+                possibleMoves.add(possibleMove);
+            }
+        }
+
+        for (int i = 0; i<=2; i++)
+        {
+            int c = a;
+            int d = b + i;
+
+            if ((c >= 0 && c <= 7) && (d >= 0 && d <= 7))
+            {
+                BoardSquare possibleMove = gameBoard.getSquare(c, d);
+                possibleMoves.add(possibleMove);
+            }
+        }
+
+        for (int i = 0; i<=2; i++) {
+            int c = a;
+            int d = b - i;
+
+            if ((c >= 0 && c <= 7) && (d >= 0 && d <= 7)) {
                 BoardSquare possibleMove = gameBoard.getSquare(c, d);
                 possibleMoves.add(possibleMove);
             }
