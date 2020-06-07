@@ -12,13 +12,7 @@ import javax.swing.UIManager.*;
 public class WarHilt {
 
     //Concepted, written, and designed by Nathaniel Flesher 8/10/2019
-
-    /*
-    DO NOT UPLOAD THIS TO GITHUB, YOU WILL COPYRIGHT THIS GAME WHEN FINISHED AND 3D PRINT THE PIECES
-
-    This game program will be to demo the game before finalizing it for production.
-    */
-
+    
     /*
     Game is played on an 8x8 board, styled like chess or checkers.
     This game will be a game somewhat of a mix between checkers and chess.  The player will be given a choice between
