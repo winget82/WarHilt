@@ -21,7 +21,8 @@ public class Calvary extends GamePiece
 
         /*
         The Calvary piece can defeat two game pieces directly in front of it (2 squares in front of it). 2 can be chosen per
-        player.  It can only move forward.  Once it is moved to the end of the board it becomes an Infantry piece.
+        player.  It can only move forward up to two squares.  Once it is moved to the end of the
+        board it becomes an Infantry piece.
         */
 
         //get current square of piece
@@ -34,7 +35,9 @@ public class Calvary extends GamePiece
          */
         //possible moves of piece
         List<BoardSquare> possibleMoves = new ArrayList<>();
-        int[][] moves = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
+        int[][] moves = {{-2, 0}, {2, 0}, {-1, 0}, {1, 0}};
+
+        //will need to update this depending on which player or side of the board started on
 
         for(int[] move : moves) {
             int a = location.convertGrid()[0];//location.convertGrid() + gameBoard.getSquare(move[0], move[1])

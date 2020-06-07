@@ -12,7 +12,7 @@ import javax.swing.UIManager.*;
 public class WarHilt {
 
     //Concepted, written, and designed by Nathaniel Flesher 8/10/2019
-    
+
     /*
     Game is played on an 8x8 board, styled like chess or checkers.
     This game will be a game somewhat of a mix between checkers and chess.  The player will be given a choice between
@@ -31,6 +31,7 @@ public class WarHilt {
     pieces, it cannot capture or defeat a piece, but can move 3 squares in any combination of directions.  If the jester
     makes it to the other end of the game board, it becomes and assassin.  This is the only way to obtain more than one
     assassin by a player in the game.  The polearm moves like the rook in chess. Player must choose one king.
+    Pieces can be placed in any formation on that players side of the board at start of the game.
      */
 
     public static void main(String[] args)
