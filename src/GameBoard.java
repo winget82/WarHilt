@@ -1,11 +1,12 @@
 import java.awt.*;
+import java.lang.reflect.Array;
 
 public class GameBoard
 {
 
     //Attributes / Fields
-    Color color1;
-    Color color2;
+    private Color color1;
+    private Color color2;
     BoardSquare[][] board = new BoardSquare[8][8];
 
     //Constructor
@@ -102,10 +103,38 @@ public class GameBoard
         return board[row][column];
     }
 
+    public BoardSquare getSquareById(int gridId)
+    {
+        BoardSquare boardSquare = null;
+        for (int i=0; i<8; i++)
+        {
+            for (int j=0; j<8; j++)
+            {
+                if (gridId == board[i][j].getGridId())
+                {
+                    boardSquare = board[i][j];
+                }
+                else
+                {
+                    boardSquare = null;
+                }
+            }
+        }
+        return boardSquare;
+    }
+
     public void setColors(Color color1, Color color2)
     {
         this.color1 = color1;
         this.color2 = color2;
+    }
+
+    public Color[] getColors()
+    {
+        Color[] boardColors = new Color[2];
+        boardColors[0] = color1;
+        boardColors[1] = color2;
+        return boardColors;
     }
 
     /*can access the squares color or gridname, etc like this:

@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import javax.swing.UIManager.*;
 
@@ -764,10 +765,6 @@ public class WarHilt {
                                                 {
                                                     button.setBackground(Color.yellow);
                                                 }
-                                                else
-                                                {
-                                                    button.setBackground(squareColor);
-                                                }
                                             }
                                         }
                                     }
@@ -784,15 +781,9 @@ public class WarHilt {
                                         {
                                             for (JButton button : jButtonsArrayList)
                                             {
-                                                Color currentSquareColor = button.getBackground();
-
                                                 if ((button.getName().equals(gameBoard.getSquare(move.convertGrid()[0], move.convertGrid()[1]).getGridId().toString())))
                                                 {
                                                     button.setBackground(Color.yellow);
-                                                }
-                                                else
-                                                {
-                                                    button.setBackground(currentSquareColor);
                                                 }
                                             }
                                         }
@@ -803,6 +794,7 @@ public class WarHilt {
                                 {
                                     button.setBackground(defaultColor);
                                     //set all colors back to default
+                                    //refreshSquareColors(gameBoard,gameBoard.getColors()[0],gameBoard.getColors()[1],panel);
                                 }
                                 else
                                 {
@@ -821,7 +813,23 @@ public class WarHilt {
 
         return gameBoard;
     }
+/*
+    private static BoardSquare refreshSquareColor(BoardSquare boardSquare, Color color1, Color color2, JPanel panel)
+    {
+        int[] squareListA = {0,2,4,6,9,11,13,15,16,18,20,22,25,27,29,31,32,34,36,38,41,43,45,47,48,50,52,54,57,59,61,63};
+        int[] squareListB = {1,3,5,7,8,10,12,14,17,19,21,23,24,26,28,30,33,35,37,39,40,42,44,46,49,51,53,55,56,58,60,62};
 
+        if (Arrays.asList(squareListA).contains(boardSquare.getGridId()))
+        {
+            boardSquare.setColor(color1);
+        }
+        else if (Arrays.asList(squareListB).contains(boardSquare.getGridId()))
+        {
+            boardSquare.setColor(color2);
+        }
+        return boardSquare;
+    }
+*/
     private static GameBoard refreshSquareColors(GameBoard gameBoard, Color color1, Color color2, JPanel panel)
     {
 
